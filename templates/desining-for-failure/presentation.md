@@ -15,15 +15,17 @@ footer: Go Days Berlin 2019
 
 ![](images/control_panel.jpg)
 
-^ Think about an airplane
-^ It has something called EMLS. It controls all eletric circuits in the plane
-^ If this system fails there are at least 2 more fallbacks that are automatically activated that keep the essentials eletric systems running.
+^ Think about an airplane, a boing 777 to be especific
+^ It has something called ELMS. It controls all eletric circuits in the plane
+^ If this system fails there are at least 4 fallbacks that are automatically activated to keep the essentials eletric systems running
 
 ---
 
 ## __Essentials__
 
 ^ The important word here is essentials
+^ The plane keeps running without problems for a limited period of time and without manual intervention
+^ This system was created on 1993
 
 ---
 
@@ -42,6 +44,34 @@ footer: Go Days Berlin 2019
 ## Health-check and Load Balancing
 
 ![](images/heartbeat.jpg)
+
+---
+
+![fit](images/health-code.png)
+
+---
+
+## If everything is OK you get...
+
+---
+
+![fit](images/health-ok.png)
+
+---
+
+## If things are not good but your app still can work...
+
+---
+
+![fit](images/health-partial.png)
+
+---
+
+## Otherwise...
+
+---
+
+![fit](images/health-fail.png)
 
 ---
 
@@ -82,6 +112,10 @@ footer: Go Days Berlin 2019
 ---
 
 ## Outbox Pattern
+
+^ How can producers reliably send messages when the broker/consumer is unavailable?
+^ Lets imagine that you are pushing events into rabbitmq. Now think that for some reason rabbitmq is not available
+^ What happens to the messages?
 
 ---
 

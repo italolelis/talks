@@ -7,17 +7,13 @@ footer: Go Days Berlin 2019
 
 ---
 
-## Who __am__ I?
-
-![](images/italo.jpg)
-
----
+Think about an airplane, a boing 777 to be especific
 
 ![fit](images/plane.jpg)
 
-^ Think about an airplane, a boing 777 to be especific
-
 ---
+
+# ELMS
 
 ![](images/control_panel.jpg)
 
@@ -98,7 +94,7 @@ footer: Go Days Berlin 2019
 
 ---
 
-## Load shedding
+# *Load shedding*
 
 ^ Circuit Breakers
 - API Request Deadline
@@ -106,9 +102,22 @@ footer: Go Days Berlin 2019
 
 ---
 
+## Circuit Breakers
+
+---
+
+![fit](images/cb-code.png)
+
+---
+
 ## Retry Logic
 
-^ CB are more efficient when they have a retry logic with exponential backoff
+^ To create resilient microservices, you need to handle possible HTTP failure scenarios
+- CB are more efficient when they have a retry logic with exponential backoff
+
+---
+
+![fit](images/retry-code.png)
 
 ---
 
@@ -116,19 +125,26 @@ footer: Go Days Berlin 2019
 
 ![](images/bulkheads.jpg)
 
+^ Isolates consumers and services from cascading failures. An issue affecting a consumer or service can be isolated within its own bulkhead, preventing the entire solution from failing.
+- Allows you to preserve some functionality in the event of a service failure. Other services and features of the application will continue to work.
+- Allows you to deploy services that offer a different quality of service for consuming applications. A high-priority consumer pool can be configured to use high-priority services.
+
 ---
 
 ## Rate Limiters
 
-^ Client Quota-based Rate Limit
+^ You may think rate limiter are only used in an edge layer. 
+Think about a caller of your service. Let's say that it's missbehaving and overloading your service.
+A rate limiter would help you prevent this kind of scenarios.
+Client Quota-based Rate Limit
+
+---
+
+![fit](images/rate-code.png)
 
 ---
 
 ## Failover caching
-
----
-
-## Event Driven Architecture
 
 ---
 
@@ -140,7 +156,7 @@ footer: Go Days Berlin 2019
 
 ---
 
-## SLO's and SLI's
+# *SLO's and SLI's*
 
 ---
 
@@ -159,6 +175,10 @@ footer: Go Days Berlin 2019
 ---
 
 ![fit](images/trace-code.png)
+
+---
+
+![fit](images/jaeger.png)
 
 ---
 

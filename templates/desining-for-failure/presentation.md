@@ -207,4 +207,6 @@ Client Quota-based Rate Limit
 
 ---
 
+# Thank you!
+
 ![](images/thanks.jpg)

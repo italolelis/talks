@@ -15,7 +15,7 @@ Think about an airplane, a boing 777 to be especific
 
 # ELMS
 
-![](images/control_panel.jpg)
+![fit](images/cockpit.jpg)
 
 ^ It has something called ELMS. It controls all eletric circuits in the plane
 - If this system fails there are at least 4 fallbacks that are automatically activated to keep the essentials eletric systems running
@@ -144,15 +144,19 @@ Client Quota-based Rate Limit
 
 ---
 
-## Failover caching
-
----
-
 ## Outbox Pattern
 
 ^ How can producers reliably send messages when the broker/consumer is unavailable?
 - Lets imagine that you are pushing events into rabbitmq. Now think that for some reason rabbitmq is not available
 - What happens to the messages?
+
+---
+
+## Outlier Server Host Detection
+
+---
+
+## Service Mesh
 
 ---
 

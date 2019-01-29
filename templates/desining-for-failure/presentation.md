@@ -7,13 +7,20 @@ footer: Go Days Berlin 2019
 
 ---
 
+## Desining *systems* for the *unexpected*!
+
+---
+
 Think about an airplane, a boing 777 to be especific
 
 ![fit](images/plane.jpg)
 
+^ The first plane flight happened in 1906
+
 ---
 
-# ELMS
+# *__ELMS__*
+## (Electrical Load Management System)
 
 ![fit](images/cockpit.jpg)
 
@@ -81,16 +88,12 @@ Think about an airplane, a boing 777 to be especific
 
 ## Self-healing
 
-^ Now, if your instance is kiked out of the cluster you probably want that back
+^ Now, if your instance is kicked out of the cluster you probably want that back
 - Container Orchestration systems normally try to spin up a new instance of your application in the same cluster as soon as possible
 
 ---
 
-## In *kube* this is as simple as defining a YAML file rule
-
----
-
-![fit](images/selfhealing.png)
+### Container orchestrators do this automatically
 
 ---
 
@@ -110,6 +113,10 @@ Think about an airplane, a boing 777 to be especific
 
 ---
 
+![](images/hystrix.png)
+
+---
+
 ## Retry Logic
 
 ^ To create resilient microservices, you need to handle possible HTTP failure scenarios
@@ -118,18 +125,6 @@ Think about an airplane, a boing 777 to be especific
 ---
 
 ![fit](images/retry-code.png)
-
----
-
-## Bulkhead
-
-![](images/bulkheads.jpg)
-
-^ Isolates consumers and services from cascading failures. An issue affecting a consumer or service can be isolated within its own bulkhead, preventing the entire solution from failing.
-- Allows you to preserve some functionality in the event of a service failure. Other services and features of the application will continue to work.
-- Allows you to deploy services that offer a different quality of service for consuming applications. A high-priority consumer pool can be configured to use high-priority services.
-
----
 
 ## Rate Limiters
 
@@ -144,6 +139,28 @@ Client Quota-based Rate Limit
 
 ---
 
+## Bulkhead
+
+^ Isolates consumers and services from cascading failures. An issue affecting a consumer or service can be isolated within its own bulkhead, preventing the entire solution from failing.
+- Allows you to preserve some functionality in the event of a service failure. Other services and features of the application will continue to work.
+- Allows you to deploy services that offer a different quality of service for consuming applications. A high-priority consumer pool can be configured to use high-priority services.
+
+---
+
+![fit](images/titanic.jpg)
+
+^ The titanic set sail on 1912
+
+---
+
+![](images/bulkheads.jpg)
+
+---
+
+## Outlier Server Host Detection
+
+---
+
 ## Outbox Pattern
 
 ^ How can producers reliably send messages when the broker/consumer is unavailable?
@@ -152,15 +169,15 @@ Client Quota-based Rate Limit
 
 ---
 
-## Outlier Server Host Detection
-
----
-
 ## Service Mesh
 
 ---
 
-# *SLO's and SLI's*
+# *Observability*
+
+---
+
+## Defining your SLO's and SLI's
 
 ---
 

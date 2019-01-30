@@ -115,7 +115,7 @@ Think about an airplane, a boing 777 to be especific
 
 ![](images/hystrix.png)
 
----
+--- 
 
 ## Retry Logic
 
@@ -125,6 +125,8 @@ Think about an airplane, a boing 777 to be especific
 ---
 
 ![fit](images/retry-code.png)
+
+---
 
 ## Rate Limiters
 

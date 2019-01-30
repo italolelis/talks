@@ -171,6 +171,10 @@ Client Quota-based Rate Limit
 
 ---
 
+![fit](images/outbox-code.png)
+
+---
+
 ## Service Mesh
 
 ---

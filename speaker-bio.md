@@ -1,2 +1,2 @@
-I’m a Brazilian living in Berlin, Germany. Currently working as Engineering Manager @N26. In the past I worked at HelloFresh mostly doing things in go.
-I really like designing software and solving complex problems and go has been my language of choice since 2014. Today I spend most of my free time contributing to Open Source projects and writing some of my own.
+I’m a Brazilian living in Berlin, Germany. Currently working as Head of Technology @Lykon. Previously, I worked at N26 and HelloFresh mostly doing things in Go.
+I really enjoy working with distributed systems and solving complex problems. Go has been my language of choice since 2015 to help me achive these things and have a great deal of fun. Today, I spend most of my free time contributing to Open Source projects and writing some of my own.

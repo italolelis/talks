@@ -7,15 +7,15 @@ footer: Go Days Berlin 2019
 
 ---
 
-## Desining *systems* for the *unexpected*!
+## Designing *systems* for the *unexpected*!
 
 ---
 
-Think about an airplane, a boing 777 to be especific
+Think about an airplane, a Boeing 777 to be specific
 
 ![fit](images/plane.jpg)
 
-^ The first plane flight happened in 1906
+^ The first plane flight happened in 1903
 
 ---
 
@@ -25,7 +25,7 @@ Think about an airplane, a boing 777 to be especific
 ![fit](images/cockpit.jpg)
 
 ^ It has something called ELMS. It controls all eletric circuits in the plane
-- If this system fails there are at least 4 fallbacks that are automatically activated to keep the essentials eletric systems running
+- If this system fails there are at least 4 fallbacks that are automatically activated to keep the essential electrical systems running
 
 ---
 
@@ -33,7 +33,7 @@ Think about an airplane, a boing 777 to be especific
 
 ^ The important word here is essentials
 - The plane keeps running without problems for a limited period of time and without manual intervention
-- This system was created on 1993
+- This system was created in 1993
 
 ---
 
@@ -53,8 +53,8 @@ Think about an airplane, a boing 777 to be especific
 
 ![](images/heartbeat.jpg)
 
-^ Standard helath checks will help load balancers understand when something is wrong
-- They will kik the missbehaving instance our of the cluster to ensure no requests goes to it
+^ Standard health checks will help load balancers understand when something is wrong
+- They will kick the missbehaving instance out of the cluster to ensure no requests go to it
 
 ---
 
@@ -101,7 +101,7 @@ Think about an airplane, a boing 777 to be especific
 
 ^ Circuit Breakers
 - API Request Deadline
-- Request Queuing
+- Request Queueing
 
 ---
 
@@ -130,9 +130,9 @@ Think about an airplane, a boing 777 to be especific
 
 ## Rate Limiters
 
-^ You may think rate limiter are only used in an edge layer. 
-Think about a caller of your service. Let's say that it's missbehaving and overloading your service.
-A rate limiter would help you prevent this kind of scenarios.
+^ You may think rate limiters are only used in an edge layer. 
+Think about a caller of your service. Let's say that it's misbehaving and overloading your service.
+A rate limiter would help you prevent these kinds of scenario.
 Client Quota-based Rate Limit
 
 ---
@@ -151,7 +151,7 @@ Client Quota-based Rate Limit
 
 ![fit](images/titanic.jpg)
 
-^ The titanic set sail on 1912
+^ The titanic set sail in 1912 from Belfast in Northern Ireland
 
 ---
 
@@ -166,7 +166,7 @@ Client Quota-based Rate Limit
 ## Outbox Pattern
 
 ^ How can producers reliably send messages when the broker/consumer is unavailable?
-- Lets imagine that you are pushing events into rabbitmq. Now think that for some reason rabbitmq is not available
+- Lets imagine that you are pushing events into rabbitmq. Now consider that, for some reason, rabbitmq is not available
 - What happens to the messages?
 
 ---
@@ -183,7 +183,7 @@ Client Quota-based Rate Limit
 
 ---
 
-## Defining your SLO's and SLI's
+## Defining your SLOs and SLIs
 
 ---
 
@@ -221,8 +221,8 @@ Client Quota-based Rate Limit
 
 1. Always think about your dependencies
 2. Dependency Isolation and Graceful Degradation
-3. Load shedding and Request Controlling
-4. Observalibility is not optional
+3. Load Shedding and Request Controlling
+4. Observability is not optional
 
 ---
 

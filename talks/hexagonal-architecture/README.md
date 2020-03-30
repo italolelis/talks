@@ -1,4 +1,4 @@
-# Securing applications in Kubernetes
+# Building hexagonal architecture Go applications
 
 ## Abstract
 

@@ -1,7 +1,6 @@
 # Talks
 
-This repository holds all the abstracts, templates and slides of my talks. I use [Deckset](http://deckset.com)
-to build my presentations. Feel free to fork this repo and modify it if you'd like.
+This repository holds all the abstracts, templates and likns to my talks.
 
 1. [Desining for failure](talks/designing-for-failure)
 2. [Securing applications in Kubernetes](talks/securing-applications-in-kubernetes)
@@ -19,5 +18,5 @@ Images that contain code, dashboards, traces, or any kind of aditional informati
 You can find me on:
 
 - [Speakerdeck](https://speakerdeck.com/italolelis)
-- Twitter [@italolelis](https://twitter.com/italolelis)
+- [Twitter](https://twitter.com/italolelis)
 - [LinkedIn](https://www.linkedin.com/in/italolelis)

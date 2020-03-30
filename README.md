@@ -3,7 +3,7 @@
 This repository holds all the abstracts, templates and slides of my talks. I use [Deckset](http://deckset.com)
 to build my presentations. Feel free to fork this repo and modify it if you'd like.
 
-1. [Desining for failure](talks/desining-for-failure)
+1. [Desining for failure](talks/designing-for-failure)
 2. [Securing applications in Kubernetes](talks/securing-applications-in-kubernetes)
 3. [Revealing the world of service meshes](talks/revealing-the-world-of-service-meshes)
 4. [Building hexagonal architecture Go applications](talks/hexagonal-architecture)

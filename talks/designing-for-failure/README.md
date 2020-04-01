@@ -1,26 +1,19 @@
 # Designing for failure
 
+## Summary
+
+We have neglected failure for quite some time in our industry, but how can we design for failure? And especially, how Go can help us to be prepared for the unexpected? In this talk, I would like to present a few of the resilient patterns that we can apply in distributed systems.
+
 ## Abstract
 
-In recent years, we’ve been talking more and more about failure and
-resilience in a distributed system architecture. Unfortunately, failure has
-been neglected for quite some time in our industry. Systems have grown to
-be much more complex and challenging to deal with, especially in the
-Kubernetes era. With all this new complexity it comes the question: how can
-we design systems to be resilient and ready to fail?
-This is something that mission-critical systems always had to think of first,
-but many of our services (until today) neglect the importance of this. There
-are many concepts we can learn and use from other fields like electronics,
-aviation or naval industries that will help us be prepared for the unexpected.
+In recent years, we’ve been talking more and more about failure and resilience in a distributed system architecture. Unfortunately, failure has been neglected for quite some time in our industry. Systems have grown to be much more complex and challenging to deal with, especially in the Kubernetes era. With all this new complexity it comes the question: how can we design systems to be resilient and ready to fail?
+This is something that mission-critical systems always had to think of first, but many of our services (until today) neglect the importance of this. There are many concepts we can learn and use from other fields like electronics, aviation or naval industries that will help us be prepared for the unexpected.
 
-In this talk, I would like to talk about how to design a system for failure.
-What are the pitfalls and gotchas that we have to be prepared in a
-microservice environment? How can SRE principles help us get there? And
-most importantly, how do we put this into practice?
+In this talk, I would like to talk about how to design a system for failure. What are the pitfalls and gotchas that we have to be prepared in a microservice environment? How can SRE principles help us get there? And most importantly, how do we put this into practice?
 
 ## Outline
 
-In all of the steps I’ll show some Go, Kubernetes or Istio code on how these
+In all the steps, I’ll show some Go, Kubernetes or Istio code on how these
 patterns can be applied.
 
 * Introduction

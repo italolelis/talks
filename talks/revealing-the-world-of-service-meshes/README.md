@@ -1,30 +1,35 @@
 # Revealing the world of service meshes
 
+## Summary
+
+Service mesh technologies have gained a lot of interest over the past years. Although the concept of a service mesh might not be new to people, some of the implementation details are. In this talk I want to explore the ups and downs of using a service mesh and how can you start using one.
+
 ## Abstract
 
-Software engineering is a constant changing world. We went from monoliths to microservices. We started simple, 5 services, then 10 services, a 100 and now we see companies with 2000+ services.
-In such a scale developers and operators have the challange to standardize and guarantee that the service communication is not compromized. As a service mesh grows in size and complexity, it can become harder to understand and manage. Have you ever thought how we can operate and scale so many services?
+Software engineering is a constantly changing world. We went from monoliths to SOA to microservices and now lambda. We started simple, 5 services, then 10 services, a 100 and now we see companies with 2000+ services. Service mesh technologies have gained a lot of interest over the past years. High-traffic companies started to add a service mesh to their production applications. 
+But what is a service mesh, exactly? And why is it relevant to you?
 
-In this talk I'd like to share my experience with services mashes, and the good and bad things that comes with it. Let's figure out together if a service mashe is good for you.
+In this talk I want to explore the ups and downs of using a service mesh. My goal is to make sure you are well informed to make a smart decision if you want/need to use a service mesh.
 
 ## Outline
 
-In all of the steps I’ll show some Go, Kubernetes or Istio code on how these
-patterns can be applied.
+In all the steps, I’ll show some Go, Kubernetes and Istio code.
 
 * Introduction
 * Who am I?
 * Distributed Microservice Architecture
-* Event Driven Architecture
 * The operation problem
-* What is a service mash?
+* What a service mesh IS NOT?
+* What is a service mesh?
+    * What does a service mesh actually do?
+    * Why is the service mesh necessary?
+* Popular service meshes
     * Istio
     * Linkerd
     * Consul Connect
-* How does it work?
-* Installing Istio
+* Getting to know Istio
 * Traffic management
-    * Load Balancing
+    * Service-to-service communication
     * Failure Recovery
     * Canary Rollouts
     * A/B testing

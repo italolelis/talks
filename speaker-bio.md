@@ -1,2 +1,2 @@
-I’m a Brazilian living in Berlin, Germany. Currently working as Head of Technology [@Lykon](https://lykon.de). Previously, I worked [@N26](https://n26.com) and [@HelloFresh](https://hellofresh.de) mostly doing things in Go.
+I’m a Brazilian living in Berlin, Germany. Currently working as CTO [@Lykon](https://lykon.de). Previously, I worked [@N26](https://n26.com) and [@HelloFresh](https://hellofresh.de) mostly doing things in Go.
 I enjoy working with distributed systems and solving complex problems. Go has been my language of choice since 2015 to help me achieve these things while having a great deal of fun. Today, I spend most of my free time contributing to Open Source projects, making lots of coffee and enjoying life at its best.

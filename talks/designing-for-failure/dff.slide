@@ -1,0 +1,329 @@
+# Designing for Failure
+Jul 2020
+
+Italo Vietro
+CTO, Lykon
+@italolelis
+
+## Designing systems for the unexpected
+
+.image img/gopher-small.png _ 550
+
+## Agenda
+
+A glance in today's talk.
+
+- What is resilience?
+- Latency Control
+- Isolation
+- Self Healing
+- Traffic Control
+- Observability
+- Service Mashes
+
+##
+
+.background img/plane.jpg
+
+##
+
+<br>
+<h1 style="text-align:center;font-size:150px;">39.000.000</h1>
+
+## Numbers...
+
+* 23 deadly crashes
+* 28 fatalities
+
+.caption https://aviation-safety.net/statistics/period/barometer3.php
+
+##
+
+.background img/cockpit.jpg
+
+## Electrical Load Management System (ELMS)
+
+<h5 style="text-align:center;font-size:30px;">It keeps the</h5>
+<h5 style="text-align:center;font-size:100px;color: #feb236">Essentials</h5>
+<h5 style="text-align:center;font-size:30px;">running</h5>
+
+: Some airplanes have a system called ELMS. It controls all electric circuits in the plane
+
+
+## 
+
+<br><br><br><br><br><br>
+<p style="text-align:center;top:100%;"><q>Resilience is a Requirement, Not a Feature. – Liang Guo</q></p>
+
+## Latency Control
+
+## Timeouts
+
+.image img/doctor-strange.png _ 400
+.caption _Gopher_ by [[https://github.com/ashleymcnamara/gophers][ashleymcnamara]]
+
+## Client Timeouts
+
+.code code/client-timeout/main.go /START SIMPLE_TIMEOUT OMIT/,/END SIMPLE_TIMEOUT OMIT/
+
+## Client Timeouts
+
+You can configure your client with many more timeout options
+
+.code code/client-timeout/main.go /START COMPLETE_TIMEOUT OMIT/,/END COMPLETE_TIMEOUT OMIT/
+
+## Client Timeouts
+
+You can also use a `context` to set timeouts.
+
+.code code/client-timeout/main.go /START CONTEXT_TIMEOUT OMIT/,/END CONTEXT_TIMEOUT OMIT/
+
+## Server Timeouts
+
+.code code/server-timeout/main.go /START SERVER_TIMEOUT OMIT/,/END SERVER_TIMEOUT OMIT/
+
+## Circuit Breakers
+
+.code code/cb/main.go /START CB_STRATEGY OMIT/,/END CB_STRATEGY OMIT/
+
+Encapsulate your dependency
+
+.code code/cb/main.go /START CB_REQ OMIT/,/END CB_REQ OMIT/
+
+## Histrix
+
+.image img/hystrix.png _ 1000
+
+## Retries
+
+<br>
+
+.image img/retrier.png
+.caption https://dzone.com/articles/go-microservices-part-11-hystrix-and-resilience
+
+## Retries
+
+You can use a lib like **github.com/avast/retry-go** to manage retries.
+
+.code code/retry/main.go /START RETRY OMIT/,/END RETRY OMIT/
+
+## Isolation
+
+## Bulkhead
+
+##
+
+.background img/titanic.jpg
+
+## Bulkhead
+
+.image img/titanic.gif _ 1000
+
+## Self Healing
+
+## Health Checks
+
+Define what you want to check.
+
+.code code/health/main.go /START HEALTH OMIT/,/END HEALTH OMIT/
+
+## If everything is OK you get...
+
+`http localhost:9090/live?full=1`
+
+    HTTP/1.1 200 OK
+    Content-Length: 36
+    Content-Type: application/json; charset=utf-8
+    Date: Wed, 10 Jun 2020 11:36:33 GMT
+
+    {
+        "goroutine-threshold": "OK"
+    }
+
+`http localhost:9090/ready?full=1`
+
+    HTTP/1.1 200 OK
+    Content-Length: 149
+    Content-Type: application/json; charset=utf-8
+    Date: Wed, 10 Jun 2020 11:25:16 GMT
+
+    {
+        "google": "OK",
+        "goroutine-threshold": "OK",
+        "payments-srv": "OK"
+    }
+
+## Otherwise...
+    
+`http localhost:9090/ready?full=1`
+
+    HTTP/1.1 503 Service Unavailable
+    Content-Length: 149
+    Content-Type: application/json; charset=utf-8
+    Date: Wed, 10 Jun 2020 11:25:16 GMT
+
+    {
+        "google": "OK",
+        "goroutine-threshold": "OK",
+        "payments-srv": "Get \"https://example.io\": dial tcp: lookup example.io: no such host"
+    }
+
+## Outboxer
+
+.image img/outboxer1.png _ 400
+.caption _Gopher_ by [[https://github.com/ashleymcnamara/gophers][ashleymcnamara]]
+
+## Outboxer
+
+First thing is to setup your dependencies.
+
+.code code/outboxer/main.go /START OUTBOXER_DEPS OMIT/,/END OUTBOXER_DEPS OMIT/
+
+## Outboxer
+
+Now we create an outboxer instance passing the data store and event stream
+
+.code code/outboxer/main.go /START OUTBOXER_SETUP OMIT/,/END OUTBOXER_SETUP OMIT/
+
+## Outboxer
+
+Finally, we let the outboxer take care of the rest.
+
+.code code/outboxer/main.go /START OUTBOXER OMIT/,/END OUTBOXER OMIT/
+
+## Outboxer
+
+.image img/outboxer2.png _ 300
+.caption _Gopher_ by [[https://github.com/ashleymcnamara/gophers][ashleymcnamara]]
+
+<br>
+<h3 style="text-align:center">https://github.com/italolelis/outboxer</h3>
+
+## Traffic Control
+
+## Rate Limiters
+
+.image img/rate.png _ 400
+.caption _Gopher_ by [[https://github.com/ashleymcnamara/gophers][ashleymcnamara]]
+
+## Rate Limiters
+
+Using a lib such as **github.com/ulule/limiter**, you can easily manage rate limiting.
+
+.code code/rate/main.go /START LIMITER OMIT/,/END LIMITER OMIT/
+
+Attach it to a middleware
+
+.code code/rate/main.go /START MIDDLEWARE OMIT/,/END MIDDLEWARE OMIT/
+
+## Distributed Rate Limiters
+
+<br><br><br><br>
+
+.image img/rate-limit-distributed.png
+.caption https://konghq.com/blog/how-to-design-a-scalable-rate-limiting-algorithm/
+
+## Distributed Rate Limiters
+
+We can also use Redis as our distributed store.
+
+.code code/rate/main.go /START REDIS_LIMITER OMIT/,/END REDIS_LIMITER OMIT/
+
+## Observability
+
+## Metrics
+
+.image img/metrics.png _ 1024
+
+## Metrics
+
+.code code/cb/main.go /START CB_REQ OMIT/,/END CB_REQ OMIT/
+
+## Distributed Tracing
+
+.image img/jaeger.png _ 1024
+
+## Distributed Tracing
+
+.code code/cb/main.go /START CB_REQ OMIT/,/END CB_REQ OMIT/
+
+## Distributed Tracing
+
+<br><br><br>
+
+.image img/opencensus.png _ 800
+
+##
+
+.image img/opentelemetry.png _ 800
+
+.image img/coming-soon.png _ 500
+
+## That's a lot of things...
+
+## Service Mash
+
+##
+
+.background img/istio-and-kubernetes.jpg
+
+## Istio Architecture
+
+.image img/istio-architecture.svg _ 800
+
+## Timeouts
+
+.code code/istio/virtual-service.yaml HLtimeout
+
+## Retries
+
+.code code/istio/virtual-service.yaml HLretry
+
+## Circuit Breakers
+
+.code code/istio/destination-rule.yaml
+
+## Visualize your Mesh
+
+.image img/kiali-ingress-gateway-only.png _ 1024
+
+## Recap
+
+- What is resilience? ✔️
+- Latency Control: Timeouts, Circuit Breakers, Retries ✔️
+- Isolation: Bulkheads ✔️
+- Self Healing: Health Checks, Outboxer ✔️
+- Traffic Control: Rate Limiters ✔️
+- Observability ✔️
+- Service Mashes ✔️
+
+##
+
+.image img/micdrop.png _ 400
+.caption _Gopher_ by [[https://github.com/ashleymcnamara/gophers][ashleymcnamara]]
+
+<br>
+
+<center>
+
+[https://github.com/italolelis/talks](https://github.com/italolelis/talks)
+
+</center>
+
+<center>
+
+[https://github.com/italolelis/coffee-shop](https://github.com/italolelis/coffee-shop)
+
+</center>
+
+## Study
+
+<center>
+
+[https://docs.microsoft.com/en-us/azure/architecture/patterns/category/resiliency](https://docs.microsoft.com/en-us/azure/architecture/patterns/category/resiliency)
+
+</center>
+
+##
+
+.image img/twitter.png _ 500

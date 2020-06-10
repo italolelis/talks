@@ -19,7 +19,7 @@ A glance in today's talk.
 - Self Healing
 - Traffic Control
 - Observability
-- Service Mashes
+- Service Meshes
 
 ##
 
@@ -237,7 +237,7 @@ We can also use Redis as our distributed store.
 
 ## Metrics
 
-.code code/cb/main.go /START CB_REQ OMIT/,/END CB_REQ OMIT/
+.code code/observability/main.go /START METRICS OMIT/,/END METRICS OMIT/
 
 ## Distributed Tracing
 
@@ -245,7 +245,7 @@ We can also use Redis as our distributed store.
 
 ## Distributed Tracing
 
-.code code/cb/main.go /START CB_REQ OMIT/,/END CB_REQ OMIT/
+.code code/observability/main.go /START TRACING OMIT/,/END TRACING OMIT/
 
 ## Distributed Tracing
 
@@ -261,7 +261,7 @@ We can also use Redis as our distributed store.
 
 ## That's a lot of things...
 
-## Service Mash
+## Service Mesh
 
 ##
 
@@ -295,7 +295,7 @@ We can also use Redis as our distributed store.
 - Self Healing: Health Checks, Outboxer ✔️
 - Traffic Control: Rate Limiters ✔️
 - Observability ✔️
-- Service Mashes ✔️
+- Service Meshes ✔️
 
 ##
 

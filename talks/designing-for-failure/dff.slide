@@ -119,6 +119,12 @@ You can use a lib like **github.com/avast/retry-go** to manage retries.
 
 .image img/titanic.gif _ 1000
 
+## Bulkhead
+
+The complete implementation can be found [https://github.com/gojek/heimdall](https://github.com/gojek/heimdall)
+
+.code code/bulkhead/main.go /START BULKHEAD OMIT/,/END BULKHEAD OMIT/
+
 ## Self Healing
 
 ## Health Checks
@@ -287,6 +293,12 @@ We can also use Redis as our distributed store.
 
 .image img/kiali-ingress-gateway-only.png _ 1024
 
+## A service creation
+
+Combining the best of the two worlds
+
+.code code/lykon/repos.tf HLtemplate
+
 ## Recap
 
 - What is resilience? ✔️
@@ -327,3 +339,4 @@ We can also use Redis as our distributed store.
 ##
 
 .image img/twitter.png _ 500
+

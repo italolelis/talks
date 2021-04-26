@@ -3,9 +3,10 @@
 This repository holds all the abstracts, templates and likns to my talks.
 
 1. [Desining for failure](talks/designing-for-failure)
-2. [Securing applications in Kubernetes](talks/securing-applications-in-kubernetes)
-3. [Revealing the world of service meshes](talks/revealing-the-world-of-service-meshes)
-4. [Building hexagonal architecture Go applications](talks/hexagonal-architecture)
+2. [Discovering the tech lead in you](talks/discovering-the-tech-lead-in-you)
+3. [Securing applications in Kubernetes](talks/securing-applications-in-kubernetes)
+4. [Revealing the world of service meshes](talks/revealing-the-world-of-service-meshes)
+5. [Building hexagonal architecture Go applications](talks/hexagonal-architecture)
 
 ## Images
 

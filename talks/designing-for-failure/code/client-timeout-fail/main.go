@@ -11,21 +11,22 @@ import (
 func main() {
 	fmt.Println("sending requests")
 
-	if err := requestSimpleTimeout(); err != nil {
+	if err := requestWithContextFails(); err != nil {
 		log.Println(err)
 	}
 
 	fmt.Println("requests finished")
 }
 
-// START SIMPLE_TIMEOUT OMIT
-func requestSimpleTimeout() error {
-	c := &http.Client{
-		Timeout: 2 * time.Second,
-	}
+// START CONTEXT_TIMEOUT OMIT
+func requestWithContextFails() error {
+	c := &http.Client{}
+
+	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
+	defer cancel()
 
 	r, err := http.NewRequestWithContext(
-		context.Background(),
+		ctx,
 		http.MethodGet,
 		"https://httpstat.us/200?sleep=3000",
 		nil,
@@ -41,4 +42,4 @@ func requestSimpleTimeout() error {
 	return nil
 }
 
-// END SIMPLE_TIMEOUT OMIT
+// END CONTEXT_TIMEOUT OMIT

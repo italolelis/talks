@@ -2,7 +2,7 @@
 Jul 2020
 
 Italo Vietro
-CTO, Lykon
+VP Platform Enginering, Urban Sports Club
 @italolelis
 
 ## Designing systems for the unexpected
@@ -29,13 +29,22 @@ A glance in today's talk.
 
 <br>
 <h1 style="text-align:center;font-size:150px;">39.000.000</h1>
+<br>
+<h4 style="text-align:center;color:gray">In 2019</h4>
 
 ## Numbers...
 
-* 23 deadly crashes
-* 28 fatalities
+* 21 deadly crashes
+* 286 fatalities
 
 .caption https://aviation-safety.net/statistics/period/barometer3.php
+
+##
+
+<br>
+<h1 style="text-align:center;font-size:150px;">0.00005%</h1>
+<br>
+<h4 style="text-align:center;color:gray">Of accidents</h4>
 
 ##
 
@@ -64,19 +73,19 @@ A glance in today's talk.
 
 ## Client Timeouts
 
-.code code/client-timeout/main.go /START SIMPLE_TIMEOUT OMIT/,/END SIMPLE_TIMEOUT OMIT/
+.play code/client-timeout/main.go /START SIMPLE_TIMEOUT OMIT/,/END SIMPLE_TIMEOUT OMIT/
 
 ## Client Timeouts
 
 You can configure your client with many more timeout options
 
-.code code/client-timeout/main.go /START COMPLETE_TIMEOUT OMIT/,/END COMPLETE_TIMEOUT OMIT/
+.play code/client-timeout-complete/main.go /START COMPLETE_TIMEOUT OMIT/,/END COMPLETE_TIMEOUT OMIT/
 
 ## Client Timeouts
 
 You can also use a `context` to set timeouts.
 
-.code code/client-timeout/main.go /START CONTEXT_TIMEOUT OMIT/,/END CONTEXT_TIMEOUT OMIT/
+.play code/client-timeout-fail/main.go /START CONTEXT_TIMEOUT OMIT/,/END CONTEXT_TIMEOUT OMIT/
 
 ## Server Timeouts
 
@@ -105,7 +114,7 @@ Encapsulate your dependency
 
 You can use a lib like **github.com/avast/retry-go** to manage retries.
 
-.code code/retry/main.go /START RETRY OMIT/,/END RETRY OMIT/
+.play code/retry/main.go /START RETRY OMIT/,/END RETRY OMIT/
 
 ## Isolation
 
@@ -247,7 +256,7 @@ We can also use Redis as our distributed store.
 
 ## Distributed Tracing
 
-.image img/jaeger.png _ 1024
+.image img/tempo.png _ 900
 
 ## Distributed Tracing
 
@@ -261,9 +270,9 @@ We can also use Redis as our distributed store.
 
 ##
 
-.image img/opentelemetry.png _ 800
+<br><br>
 
-.image img/coming-soon.png _ 500
+.image img/opentelemetry.png _ 800
 
 ## That's a lot of things...
 

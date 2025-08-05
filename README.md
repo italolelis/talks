@@ -11,7 +11,11 @@ This repository holds all the abstracts, templates, and links to my talks.
 
 ## Speaker Bio
 
-Italo Vietro is a seasoned engineering leader with a proven track record in scaling platforms and driving engineering excellence. As VP of Platform at Babbel, he focuses on fostering technical excellence, innovation, and building inclusive, high-performing teams. With experience leading organizations of over 100 people at companies like Urban Sports Club, Lykon, N26, and HelloFresh, Italo expertly navigates complex challenges, always emphasizing customer-centric and scalable solutions.
+Italo Vietro is a seasoned engineering leader with a proven track record in scaling platforms and driving engineering excellence. As Head of Engineering at Parloa, he architects the core services powering Europe’s leading agentic-AI platform for customer service—handling millions of conversations with speed, safety, and real empathy. 
+
+His route runs through former VP of Platform at Babbel, where he modernized a global learning engine for millions, and through scale-up chapters at Urban Sports Club, HelloFresh and N26 that stretched small squads into high-trust, large-scale organizations north of one hundred engineers. 
+
+Guiding every release: exacting technical excellence, an open-door culture that lets every voice raise the bar, and an unwavering eye on the end customer’s next smile.
 
 ## Images
 

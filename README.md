@@ -11,11 +11,11 @@ This repository holds all the abstracts, templates, and links to my talks.
 
 ## Speaker Bio
 
-Italo Vietro is a seasoned engineering leader with a proven track record in scaling platforms and driving engineering excellence. As Head of Engineering at Parloa, he architects the core services powering Europe’s leading agentic-AI platform for customer service—handling millions of conversations with speed, safety, and real empathy. 
+Italo Vietro is an engineering leader with a strong track record in scaling platforms and building high-performing engineering organisations. As Head of Engineering at Parloa, he leads the architecture of the core services behind Europe's leading agentic AI platform for customer service, operating at global scale.
 
-His route runs through former VP of Platform at Babbel, where he modernized a global learning engine for millions, and through scale-up chapters at Urban Sports Club, HelloFresh and N26 that stretched small squads into high-trust, large-scale organizations north of one hundred engineers. 
+Previously, he served as VP of Platform at Babbel, where he modernised a global learning platform used by millions. His career also includes key scaling roles at Urban Sports Club, HelloFresh, and N26, helping teams grow from small squads into organisations of over one hundred engineers.
 
-Guiding every release: exacting technical excellence, an open-door culture that lets every voice raise the bar, and an unwavering eye on the end customer’s next smile.
+His work focuses on designing resilient systems, enabling autonomous teams through clear ownership and guardrails, and keeping engineering decisions closely aligned with real customer outcomes.
 
 ## Images
 
